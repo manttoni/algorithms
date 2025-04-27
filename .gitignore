@@ -1,0 +1,6 @@
+.vscode/
+*.swp
+*.o
+*.a
+a.out
+*.sh
