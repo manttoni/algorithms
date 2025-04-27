@@ -14,18 +14,16 @@
 #define MAX_RUN 14 // how many processes can run simultaneously
 #define PROC_MAX 99 // how many processes can be inputted inside file
 #define PROC_LEN 16
-#define TARGET 54
+#define TARGET 54 // how many moves is it allowed to make
 
 const char op[] = "OHJELMOINTIPUTKA";
 const int moves[] = {1, -1, 4, -4}; // right, left, down, up
 const char dirs[] = "OVAY";
 
 char result[TARGET + 1];
-int max_depth;
-int best_depth; // if multiple 0 found, this is where it is least deep
-
+int max_depth; // how deep it is reading
 int ties;
-int solved;
+int solved; // how many ties are solved with tiebreakers
 
 // K O T I | O H J E
 // P I H O | L M O I
@@ -365,7 +363,6 @@ char *anagrammi(char *sq)
     memset(result, 0, TARGET + 1);
 
     int last_move = -1;
-    best_depth = INT_MAX - 1;
     int len = 0;
     t_branch *best = NULL;
     int best_value = INT_MAX;
