@@ -1,0 +1,491 @@
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 18 ties	[32mO[0m[31mT[0m[31mO[0m[31mH[0m	1 depth 	|
+| 0 solved	[31mK[0m[31mI[0m[31mM[0m[34mA[0m	72 value 	|
+| 64 lowest	[31mE[0m[31mJ[0m[31mN[0m[31mI[0m	0.00 seconds	|
+| 1 54 worst	[31mP[0m[31mU[0m[31mT[0m[31mL[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 26 ties	[31mK[0m[31mO[0m[31mT[0m[31mI[0m	2 depth 	|
+| 0 solved	[31mP[0m[31mI[0m[31mH[0m[31mO[0m	82 value 	|
+| 72 lowest	[31mJ[0m[31mE[0m[34mA[0m[31mT[0m	0.00 seconds	|
+| 0 54 worst	[32mU[0m[31mL[0m[31mM[0m[31mN[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 94 ties	[31mK[0m[31mO[0m[31mT[0m[31mI[0m	3 depth 	|
+| 14 solved	[31mP[0m[31mI[0m[32mO[0m[34mA[0m	72 value 	|
+| 64 lowest	[31mJ[0m[31mN[0m[31mM[0m[31mE[0m	0.00 seconds	|
+| 0 54 worst	[32mU[0m[32mT[0m[31mH[0m[31mL[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 227 ties	[31mK[0m[31mO[0m[31mT[0m[31mI[0m	4 depth 	|
+| 50 solved	[32mL[0m[32mM[0m[31mJ[0m[31mE[0m	44 value 	|
+| 44 lowest	[31mP[0m[31mN[0m[32mI[0m[31mO[0m	0.00 seconds	|
+| 0 54 worst	[32mU[0m[32mT[0m[31mH[0m[34mA[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 536 ties	[31mK[0m[31mO[0m[32mJ[0m[31mI[0m	5 depth 	|
+| 130 solved	[32mL[0m[31mH[0m[32mO[0m[32mI[0m	32 value 	|
+| 32 lowest	[31mT[0m[31mN[0m[31mM[0m[32mP[0m	0.00 seconds	|
+| 0 54 worst	[32mU[0m[32mT[0m[31mE[0m[34mA[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 1K ties	[32mO[0m[32mH[0m[31mI[0m[32mE[0m	6 depth 	|
+| 205 solved	[31mJ[0m[31mL[0m[32mO[0m[31mT[0m	32 value 	|
+| 30 lowest	[31mU[0m[31mP[0m[31mM[0m[31mI[0m	0.00 seconds	|
+| 2 54 worst	[31mN[0m[32mT[0m[32mK[0m[34mA[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 2K ties	[32mO[0m[32mH[0m[31mI[0m[32mE[0m	7 depth 	|
+| 414 solved	[32mL[0m[32mM[0m[31mT[0m[31mP[0m	26 value 	|
+| 26 lowest	[31mJ[0m[32mT[0m[31mO[0m[31mI[0m	0.01 seconds	|
+| 2 54 worst	[32mU[0m[31mN[0m[32mK[0m[34mA[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 4K ties	[32mO[0m[32mH[0m[31mE[0m[31mJ[0m	8 depth 	|
+| 893 solved	[32mL[0m[31mN[0m[32mO[0m[32mI[0m	20 value 	|
+| 20 lowest	[31mK[0m[32mT[0m[32mI[0m[32mP[0m	0.01 seconds	|
+| 2 54 worst	[32mU[0m[32mT[0m[31mM[0m[34mA[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 9K ties	[32mO[0m[32mH[0m[31mM[0m[32mE[0m	9 depth 	|
+| 1K solved	[31mJ[0m[31mL[0m[32mO[0m[32mI[0m	16 value 	|
+| 16 lowest	[31mT[0m[31mN[0m[32mI[0m[32mP[0m	0.02 seconds	|
+| 2 54 worst	[32mU[0m[32mT[0m[32mK[0m[34mA[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 20K ties	[32mO[0m[32mH[0m[32mJ[0m[32mE[0m	10 depth 	|
+| 3K solved	[32mL[0m[32mM[0m[32mO[0m[32mI[0m	7 value 	|
+| 7 lowest	[32mN[0m[32mT[0m[32mI[0m[31mT[0m	0.05 seconds	|
+| 11 54 worst	[31mP[0m[31mU[0m[32mK[0m[34mA[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 43K ties	[32mO[0m[32mH[0m[32mJ[0m[32mE[0m	11 depth 	|
+| 7K solved	[32mL[0m[32mM[0m[32mO[0m[32mI[0m	7 value 	|
+| 7 lowest	[32mN[0m[32mT[0m[32mI[0m[31mT[0m	0.10 seconds	|
+| 11 54 worst	[31mP[0m[31mU[0m[32mK[0m[34mA[0m	54 len     	|
+╞=======================================╡
+Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   \|   /|   -|   -|   \|   /|   \|   -|   \|   /|   /|   -|   -|   \|   \|   /|   -|   /|   \|   /|   -|   -|   \|   \|   /|   -|   /|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 88K ties	[32mO[0m[32mH[0m[32mJ[0m[32mE[0m	12 depth 	|
+| 15K solved	[31mK[0m[32mM[0m[32mO[0m[31mL[0m	17 value 	|
+| 14 lowest	[32mN[0m[31mU[0m[32mI[0m[31mI[0m	0.21 seconds	|
+| 4 54 worst	[31mT[0m[31mP[0m[31mT[0m[34mA[0m	54 len     	|
+╞=======================================╡
+|   -|   \Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|   /|   /|   -|   -|   \|   /|   \|   -|   \Process read: 1
+Process read: 2
+Process read: 3
+Process read: 4
+Process read: 5
+Process read: 6
+Process read: 7
+Process read: 8
+Process read: 9
+Process read: 10
+Process read: 11
+Process read: 12
+Process read: 13
+Process read: 14
+Process read: 15
+Process read: 16
+Process read: 17
+Process read: 18
+Process read: 19
+Process read: 20
+Process read: 21
+Process read: 22
+╞=======================================╡
+| Objective:                            |
+|  - Find "OHJELMOINTIPUTKA"            |
+|    within 54 moves                 	|
+|    using 22 processes                	|
+╞=======================================╡
+|	Min:72	Max:72	Avg:72		||   /|   /|   -|   \|   /|   -|   -|   /|   \|   /|   \|   -|   /|   \|   -|   -|   /|	Min:72	Max:82	Avg:77		||   -|   \|   \|   /|   -|   \|   /|   \|   -|   /|   -|   \|   \|   /|   /|	Min:72	Max:82	Avg:75		||   -|   -|   /|   /|   \|   /|   \|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 183K ties	[32mO[0m[32mH[0m[32mJ[0m[32mE[0m	13 depth 	|
+| 33K solved	[31mK[0m[32mM[0m[32mO[0m[31mL[0m	12 value 	|
+| 12 lowest	[32mN[0m[31mP[0m[31mT[0m[31mI[0m	0.47 seconds	|
+| 4 54 worst	[32mU[0m[32mT[0m[31mI[0m[34mA[0m	54 len     	|
+╞=======================================╡
+|   /|   -|   -|	Min:44	Max:82	Avg:67		||   \|   -|   /|   \|   -|   \|	Min:32	Max:82	Avg:60		||   /|   /|   /|   -|   -|   \|   \|	Min:32	Max:82	Avg:55		||   \|   /|   -|   /|   \|   -|	Min:26	Max:82	Avg:51		||   /|   /|   -|   \|   -|   \|	Min:20	Max:82	Avg:47		||   -|   /|   -|   /|   \|   /|	Min:16	Max:82	Avg:44		||	Min:7	Max:82	Avg:40		||	Min:7	Max:82	Avg:37		||	Min:7	Max:82	Avg:35		||	Min:7	Max:82	Avg:33		||   -|   \|   -|   \|   \|   /|   /|   -|   /|   \|   /|   /|   -|   \|   -|   /|   -|   \|   /|   -|   \|   /|   -|   \|   /|   -|   \                                         | 388K ties	[32mO[0m[32mH[0m[31mI[0m[32mE[0m	14 depth 	|
+| 80K solved	[32mL[0m[32mM[0m[32mO[0m[31mP[0m	16 value 	|
+| 16 lowest	[32mN[0m[31mU[0m[31mJ[0m[31mT[0m	1.13 seconds	|
+| 2 54 worst	[31mK[0m[34mA[0m[31mI[0m[31mT[0m	54 len     	|
+╞=======================================╡
+|	Min:7	Max:82	Avg:32		||   -|   \|   \|   /|   \|   -
