@@ -43,18 +43,14 @@ void print_flag(char *flag)
 
 void start()
 {
-    while (strchr(flag, 'E') != NULL)
-    {
-        maijaput();
-        lauriput();
-    }
+
 }
 
 int main(int argc, char **argv)
 {
     if (argc != 3)
     {
-        print(BOTH, "Give 2 starting points in format x1,y1 x2,y2 where x,y are in range [1:]");
+        print(BOTH, "Give 2 starting points in format x1,y1 x2,y2 where x,y are in range [1:]. This exercises coordinates don't start from 0.");
         return 1;
     }
 
@@ -83,9 +79,9 @@ int main(int argc, char **argv)
     print(0, "- Height:\t%d", HEIGHT);
     print(BOT, "- Area:\t\t%d", AREA);
     
-    // print_flag(flag);
+    print_flag(flag);
 
-    start(flag);
+    // start(flag);
 
     free(flag);
 

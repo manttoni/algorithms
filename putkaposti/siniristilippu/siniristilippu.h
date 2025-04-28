@@ -32,7 +32,7 @@
 
 #define TOP_MASK 0
 #define BOT_MASK 1
-#define FLAG_MASK 2
+#define FLAG_MASK 4
 
 #define UP 1
 #define DOWN 0

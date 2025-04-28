@@ -107,7 +107,7 @@ static char *print_line(int setting, char *line)
         }
         else if (*line != '\0' && word_len <= line_space)
         {
-            if ((setting >> FLAG_MASK) & 1)
+            if (setting & FLAG_MASK)
             {
                 for (int i = 0; i < word_len; ++i)
                 {
@@ -146,11 +146,11 @@ void print(int setting, char *format, ...)
     char *ptr = text;
     vsnprintf(text, PRINT_AREA + 1, format, args);
 
-    if ((setting >> TOP_MASK) & 1)
+    if (setting & TOP_MASK)
         print_sep('\n');
     while (*text != '\0')
         text = print_line(setting, text);
-    if ((setting >> BOT_MASK) & 1)
+    if (setting & BOT_MASK)
         print_sep('\n');
 
     va_end(args);
