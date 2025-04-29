@@ -1,4 +1,11 @@
-#include "siniristilippu.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+#ifndef WIDTH
+    #define WIDTH 18
+#endif
+#define HEIGHT ((WIDTH / 18) * 11)
 
 int distances[WIDTH * HEIGHT];
 
@@ -18,30 +25,6 @@ char get_color(int i)
         || (y(i) >= 4 * (HEIGHT / 11) && y(i) < 7 * (HEIGHT / 11)))
         return 'B';
     return 'W';
-}
-
-int read_input(int argc, char **argv, t_coord *maija, t_coord *lauri)
-{
-    if (argc != 3)
-    {
-        printf("Give 2 starting points in format x1,y1 x2,y2 where x,y are in range [1:]. (This exercises coordinates don't start from 0.)\n");
-        return 1;
-    }
-
-    maija->x = atoi(argv[1]) - 1;
-    maija->y = atoi(strchr(argv[1], ',') + 1) - 1;
-    lauri->x = atoi(argv[2]) - 1;
-    lauri->y = atoi(strchr(argv[2], ',') + 1) - 1;
-
-    if (maija->x < 0 || maija->y < 0 ||
-        lauri->x < 0 || lauri->y < 0 ||
-        (maija->x == lauri->x && maija->y == lauri->y))
-    {
-        printf("Invalid input value(s).\n");
-        return 2;
-    }
-
-    return 0;
 }
 
 int mandis(int ida, int idb)
@@ -103,38 +86,29 @@ void count_spots(int *mb, int *mw, int *lb, int *lw)
 // input starting points as args, compile with flag width
 int main(int argc, char **argv)
 {
-    t_coord maija, lauri;
-    int ret;
-
-    if ((ret = read_input(argc, argv, &maija, &lauri)) != 0)
-        return ret;
-
-    char *flag = my_malloc(AREA + 1);
-    memset(flag, 'E', AREA);
-
-    int imaija = maija.x + maija.y * WIDTH;
-    int ilauri = lauri.x + lauri.y * WIDTH;
+    if (argc != 3)
+        return 1;
+    int x1 = atoi(argv[1]) - 1;
+    int y1 = atoi(strchr(argv[1], ',') + 1) - 1;
+    int x2 = atoi(argv[2]) - 1;
+    int y2 = atoi(strchr(argv[2], ',') + 1) - 1;
+    int imaija = x1 + y1 * WIDTH;
+    int ilauri = x2 + y2 * WIDTH;
+    int mb = 0, mw = 0, lb = 0, lw = 0;
 
     populate_distances(imaija, ilauri);
 
-    int mb = 0, mw = 0, lb = 0, lw = 0;
-    
-    flag[imaija] = get_color(imaija);
     if (get_color(imaija) == 'W')
         mw++;
     else
         mb++;
     
-    flag[ilauri] = get_color(ilauri);
     if (get_color(ilauri) == 'W')
         lw++;
     else
         lb++;
 
     count_spots(&mb, &mw, &lb, &lw);
-
-    free(flag);
-
     printf("%d %d %d %d %d\n", WIDTH, mb, mw, lb, lw);
 
     return 0;
