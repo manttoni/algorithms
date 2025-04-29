@@ -109,7 +109,7 @@ static char *print_line(int setting, char *line)
         {
             if (setting & FLAG_MASK)
             {
-                for (int i = 0; i < word_len; ++i)
+                for (size_t i = 0; i < word_len; ++i)
                 {
                     if (*line == 'W')
                         printf("%s", WHITE);

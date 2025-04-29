@@ -9,6 +9,7 @@
 #include <stdbool.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <ncurses.h>
 
 #ifndef WIDTH
 #define WIDTH 18
@@ -17,7 +18,7 @@
 #define HEIGHT ((WIDTH / 18) * 11)
 #define AREA (WIDTH * HEIGHT)
 
-#define PRINT_FLAG_WIDTH_STRETCH 2
+#define PRINT_FLAG_WIDTH_STRETCH 4
 #define PRINT_FLAG_HEIGHT_STRETCH 2
 
 #define PRINT_WIDTH (18 * PRINT_FLAG_WIDTH_STRETCH)
@@ -44,6 +45,12 @@
 #define WHITE "\033[38;2;255;255;255m"
 #define BLACK "\033[30m"
 #define RESET "\033[0m"
+
+typedef struct s_coord
+{
+    int x;
+    int y;
+}   t_coord;
 
 void *my_malloc(size_t size);
 void print(int sep, char *format, ...);

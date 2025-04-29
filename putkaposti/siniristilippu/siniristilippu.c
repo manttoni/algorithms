@@ -1,8 +1,6 @@
 #include "siniristilippu.h"
 
-int maija = 0, lauri = 0;
-int x1, y1, x2, y2;
-char *flag;
+int distances[WIDTH * HEIGHT];
 
 int x(int i)
 {
@@ -22,68 +20,122 @@ char get_color(int i)
     return 'W';
 }
 
-void print_flag(char *flag)
-{
-    char printflag[PRINT_AREA + 1];
-    memset(printflag, ' ', PRINT_AREA + 1);
-    printflag[PRINT_AREA] = '\0';
-    for (int i = 0; i < PRINT_AREA; ++i)
-    {
-        int draw_x = i % PRINT_WIDTH;
-        int draw_y = i / PRINT_WIDTH;
-        
-        int source_x = draw_x * WIDTH / PRINT_WIDTH;
-        int source_y = draw_y * HEIGHT / PRINT_HEIGHT;
-        
-        int source_index = source_y * WIDTH + source_x;
-        printflag[i] = flag[source_index];
-    }
-    print(BOT | FLAG, "%s", printflag);
-}
-
-void start()
-{
-
-}
-
-int main(int argc, char **argv)
+int read_input(int argc, char **argv, t_coord *maija, t_coord *lauri)
 {
     if (argc != 3)
     {
-        print(BOTH, "Give 2 starting points in format x1,y1 x2,y2 where x,y are in range [1:]. This exercises coordinates don't start from 0.");
+        printf("Give 2 starting points in format x1,y1 x2,y2 where x,y are in range [1:]. (This exercises coordinates don't start from 0.)\n");
         return 1;
     }
 
-    x1 = atoi(argv[1]);
-    y1 = atoi(strchr(argv[1], ',') + 1);
-    x2 = atoi(argv[2]);
-    y2 = atoi(strchr(argv[2], ',') + 1);
+    maija->x = atoi(argv[1]) - 1;
+    maija->y = atoi(strchr(argv[1], ',') + 1) - 1;
+    lauri->x = atoi(argv[2]) - 1;
+    lauri->y = atoi(strchr(argv[2], ',') + 1) - 1;
 
-    if (x1 < 1 || y1 < 1 || x2 < 1 || y2 < 1 || (x1 == x2 && y1 == y2))
+    if (maija->x < 0 || maija->y < 0 ||
+        lauri->x < 0 || lauri->y < 0 ||
+        (maija->x == lauri->x && maija->y == lauri->y))
     {
-        print(BOTH, "Invalid input");
-        return 1;
+        printf("Invalid input value(s).\n");
+        return 2;
     }
 
-    flag = my_malloc(AREA + 1);
+    return 0;
+}
+
+int mandis(int ida, int idb)
+{
+    int x_a = ida % WIDTH;
+    int x_b = idb % WIDTH;
+    int y_a = ida / WIDTH;
+    int y_b = idb / WIDTH;
+    return abs(x_a - x_b) + abs(y_a - y_b);
+}
+
+// marks the shortest distance. if its lauri makes it negative
+void populate_distances(int maija, int lauri)
+{
+    for (int i = 0; i < WIDTH * HEIGHT; ++i)
+    {
+        int m_dist = mandis(i, maija);
+        int l_dist = mandis(i, lauri);
+        if (m_dist == l_dist)
+        {
+            char color = get_color(i);
+            if (color == 'W')
+                distances[i] = -l_dist;
+            else
+                distances[i] = m_dist;
+        }
+        else if (m_dist < l_dist)
+            distances[i] = m_dist;
+        else
+            distances[i] = -l_dist;
+    }
+}
+
+void count_spots(int *mb, int *mw, int *lb, int *lw)
+{
+    for (int i = 0; i < WIDTH * HEIGHT; ++i)
+    {
+        int value = distances[i];
+        if (value == 0)
+            continue;
+        char color = get_color(i);
+        if (color == 'B')
+        {
+            if (value > 0)
+                (*mb)++;
+            if (value < 0)
+                (*lb)++;
+        }
+        else
+        {
+            if (value > 0)
+                (*mw)++;
+            if (value < 0)
+                (*lw)++;
+        }
+    }
+}
+
+// input starting points as args, compile with flag width
+int main(int argc, char **argv)
+{
+    t_coord maija, lauri;
+    int ret;
+
+    if ((ret = read_input(argc, argv, &maija, &lauri)) != 0)
+        return ret;
+
+    char *flag = my_malloc(AREA + 1);
     memset(flag, 'E', AREA);
 
-    // for(int i = 0; i < AREA; ++i)
-    // {
-    //     if (rand() % 3 == 0)
-    //         flag[i] = get_color(i);
-    // }
+    int imaija = maija.x + maija.y * WIDTH;
+    int ilauri = lauri.x + lauri.y * WIDTH;
 
-    print(BOTH, "Flag created:");
-    print(0, "- Width:\t%d", WIDTH);
-    print(0, "- Height:\t%d", HEIGHT);
-    print(BOT, "- Area:\t\t%d", AREA);
+    populate_distances(imaija, ilauri);
+
+    int mb = 0, mw = 0, lb = 0, lw = 0;
     
-    print_flag(flag);
+    flag[imaija] = get_color(imaija);
+    if (get_color(imaija) == 'W')
+        mw++;
+    else
+        mb++;
+    
+    flag[ilauri] = get_color(ilauri);
+    if (get_color(ilauri) == 'W')
+        lw++;
+    else
+        lb++;
 
-    // start(flag);
+    count_spots(&mb, &mw, &lb, &lw);
 
     free(flag);
+
+    printf("%d %d %d %d %d\n", WIDTH, mb, mw, lb, lw);
 
     return 0;
 }
