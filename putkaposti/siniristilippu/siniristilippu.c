@@ -7,7 +7,7 @@
 #endif
 #define HEIGHT ((WIDTH / 18) * 11)
 
-int distances[WIDTH * HEIGHT];
+int moves[4];
 
 int x(int i)
 {
@@ -19,12 +19,12 @@ int y(int i)
     return (i / WIDTH);
 }
 
-char get_color(int i)
+int get_color(int i)
 {
     if ((   x(i) >= 5 * (WIDTH / 18) && x(i) < 8 * (WIDTH / 18)) 
         || (y(i) >= 4 * (HEIGHT / 11) && y(i) < 7 * (HEIGHT / 11)))
-        return 'B';
-    return 'W';
+        return 0;
+    return 1;
 }
 
 int mandis(int ida, int idb)
@@ -36,50 +36,33 @@ int mandis(int ida, int idb)
     return abs(x_a - x_b) + abs(y_a - y_b);
 }
 
-// marks the shortest distance. if its lauri makes it negative
-void populate_distances(int maija, int lauri)
+/* moves indices:
+    0: maija blue
+    1: maija white
+    2: lauri blue
+    3: lauri white
+   color:
+    0: blue
+    1: white
+*/
+void calculate_result(int imaija, int ilauri)
 {
     for (int i = 0; i < WIDTH * HEIGHT; ++i)
     {
-        int m_dist = mandis(i, maija);
-        int l_dist = mandis(i, lauri);
+        int m_dist = mandis(i, imaija);
+        int l_dist = mandis(i, ilauri);
+        int color = get_color(i);
         if (m_dist == l_dist)
         {
-            char color = get_color(i);
-            if (color == 'W')
-                distances[i] = -l_dist;
+            if (color == 0)
+                moves[0]++;
             else
-                distances[i] = m_dist;
+                moves[3]++;
         }
-        else if (m_dist < l_dist)
-            distances[i] = m_dist;
-        else
-            distances[i] = -l_dist;
-    }
-}
-
-void count_spots(int *mb, int *mw, int *lb, int *lw)
-{
-    for (int i = 0; i < WIDTH * HEIGHT; ++i)
-    {
-        int value = distances[i];
-        if (value == 0)
-            continue;
-        char color = get_color(i);
-        if (color == 'B')
-        {
-            if (value > 0)
-                (*mb)++;
-            if (value < 0)
-                (*lb)++;
-        }
-        else
-        {
-            if (value > 0)
-                (*mw)++;
-            if (value < 0)
-                (*lw)++;
-        }
+        else if (m_dist == 0 || m_dist < l_dist)
+            moves[color]++;
+        else if (l_dist == 0 || l_dist < m_dist)
+            moves[2 + color]++;
     }
 }
 
@@ -94,22 +77,10 @@ int main(int argc, char **argv)
     int y2 = atoi(strchr(argv[2], ',') + 1) - 1;
     int imaija = x1 + y1 * WIDTH;
     int ilauri = x2 + y2 * WIDTH;
-    int mb = 0, mw = 0, lb = 0, lw = 0;
 
-    populate_distances(imaija, ilauri);
-
-    if (get_color(imaija) == 'W')
-        mw++;
-    else
-        mb++;
-    
-    if (get_color(ilauri) == 'W')
-        lw++;
-    else
-        lb++;
-
-    count_spots(&mb, &mw, &lb, &lw);
-    printf("%d %d %d %d %d\n", WIDTH, mb, mw, lb, lw);
+    memset(moves, 0, 4 * sizeof(int));
+    calculate_result(imaija, ilauri);
+    printf("%d %d %d %d %d\n", WIDTH, moves[0], moves[1], moves[2], moves[3]);
 
     return 0;
 }
