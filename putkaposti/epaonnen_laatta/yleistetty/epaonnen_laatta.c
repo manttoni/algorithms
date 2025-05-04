@@ -100,7 +100,7 @@ int split_horizontally(t_data *data, int index)
     int x = x_l(data, index);
     int y_max = y_l(data, index);
 
-    for (int y = 1; y < y_max; ++y)
+    for (int y = 1; y < y_max / 2 + 1; ++y)
     {
         // check if splitting here would result in duplicate areas
         if (y == y_max - y || has_area(data, y * x) || has_area(data, (y_max - y) * x))
@@ -118,7 +118,7 @@ int split_vertically(t_data *data, int index)
     int x_max = x_l(data, index);
     int y = y_l(data, index);
 
-    for (int x = 1; x < x_max; ++x)
+    for (int x = 1; x < x_max / 2 + 1; ++x)
     {
         // check if splitting here would result in duplicate areas
         if (x == x_max - x || has_area(data, y * x) || has_area(data, y * (x_max - x)))
@@ -153,25 +153,25 @@ int find_largest(t_data *data, int limit)
 
 int better_result(t_data *data, int prev_result)
 {
-    // for (int i = 0; i < data->area; ++i)
-    // {
-    //     while (i % 2 == 0 && split_vertically(data, i));
-    //     while (i % 2 == 1 && split_horizontally(data, i));
-    // }
-    for (int limit = data->area + 1; limit > 0; limit--)
+    for (int i = 0; i < data->area; ++i)
     {
-        int piece_i = find_largest(data, limit);
-        int width = x_l(data, piece_i);
-        int height = y_l(data, piece_i);
-        if (width > height)
-        {
-            while (split_vertically(data, piece_i));
-        }
-        else
-        {
-            while (split_horizontally(data, piece_i));
-        }
+        split_vertically(data, i);
+        split_horizontally(data, i);
     }
+    // for (int limit = data->area + 1; limit > 0; limit--)
+    // {
+    //     int piece_i = find_largest(data, limit);
+    //     int width = x_l(data, piece_i);
+    //     int height = y_l(data, piece_i);
+    //     if (width > height)
+    //     {
+    //         while (split_vertically(data, piece_i));
+    //     }
+    //     else
+    //     {
+    //         while (split_horizontally(data, piece_i));
+    //     }
+    // }
     return prev_result < pieces_l(data);
 }
 
@@ -211,14 +211,10 @@ int main(int argc, char **argv)
         }
     }
 
-    // wait for them to finish
-    for (int i = 0; i < sizes; ++i)
-        pthread_join(threads[i], NULL);
-
-    // read results
     int result = 0;
     for (int i = 0; i < sizes; ++i)
     {
+        pthread_join(threads[i], NULL);
         print_l(&data[i]);
         free(data[i].laatta);
         result += data[i].pieces;
