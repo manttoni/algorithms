@@ -24,7 +24,19 @@
 #define FAILURE 1
 #define FAILURE_MAX_PROCESS 2
 
+#define RESET "\x1b[0m"
+
 clock_t timer;
+
+void print_fg_color(int c)
+{
+    printf("\x1b[38;5;%dm", c % 256);
+}
+
+void print_bg_color(int c)
+{
+    printf("\x1b[48;5;%dm", c % 256);
+}
 
 void *my_malloc(size_t size)
 {

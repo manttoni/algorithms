@@ -59,7 +59,10 @@ void print_l(t_data *data)
     {
         if (i != 0 && i % data->size == 0)
             printf("\n");
+        print_fg_color(data->laatta[i] * 2);
+        // print_bg_color(data->laatta[i] * 2);
         printf("%c", data->laatta[i]);
+        printf("%s", RESET);
     }
     // printf("\nPieces: %d\n", pieces_l(laatta));
     printf("\n\n");
@@ -150,6 +153,11 @@ int find_largest(t_data *data, int limit)
 
 int better_result(t_data *data, int prev_result)
 {
+    // for (int i = 0; i < data->area; ++i)
+    // {
+    //     while (i % 2 == 0 && split_vertically(data, i));
+    //     while (i % 2 == 1 && split_horizontally(data, i));
+    // }
     for (int limit = data->area + 1; limit > 0; limit--)
     {
         int piece_i = find_largest(data, limit);
@@ -157,11 +165,11 @@ int better_result(t_data *data, int prev_result)
         int height = y_l(data, piece_i);
         if (width > height)
         {
-            split_vertically(data, piece_i);
+            while (split_vertically(data, piece_i));
         }
         else
         {
-            split_horizontally(data, piece_i);
+            while (split_horizontally(data, piece_i));
         }
     }
     return prev_result < pieces_l(data);
