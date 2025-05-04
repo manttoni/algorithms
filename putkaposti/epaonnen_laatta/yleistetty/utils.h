@@ -1,24 +1,14 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-typedef enum
-{
-    HOR,
-    VER
-}   direction;
 
-int min(int a, int b)
+typedef struct s_data
 {
-    if (a < b)
-        return a;
-    return b;
-}
+    int pieces;
+    int size;
+    int area;
+    char *laatta;
+}   t_data;
 
-int max(int a, int b)
-{
-    if (a > b)
-        return a;
-    return b;
-}
 
 #endif
