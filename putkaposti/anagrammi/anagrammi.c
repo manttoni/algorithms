@@ -11,7 +11,7 @@
 #include <fcntl.h>
 #include <math.h>
 
-#define MAX_RUN 140 // how many processes can run simultaneously
+#define MAX_RUN 14 // how many processes can run simultaneously
 #define PROC_MAX 99 // how many processes can be inputted inside file
 #define PROC_LEN 16
 #define TARGET 54 // how many moves is it allowed to make
