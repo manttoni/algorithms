@@ -190,6 +190,7 @@ int start_process(int *pids, void *data, int (*func)(void *))
     start_timer();
     func(data);
     print(BOTH, "%.1f s", stop_timer());
+    exit(SUCCESS);
 }
 
 #endif
