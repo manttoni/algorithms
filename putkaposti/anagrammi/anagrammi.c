@@ -186,10 +186,10 @@ void ps(char *sq, double secs, int best_value, t_branch *best)
             printf("\033[32m");
         else
             printf("\033[31m");
-        
+
         // char
         printf("%c", sq[i]);
-        
+
         // reset color
         printf("\033[0m");
 
@@ -342,7 +342,7 @@ t_branch *best_move(int last_move, int depth, char *sq)
         }
 
         if (best == NULL || branch->value < best->value || tiebreaker(best, branch))
-        {   
+        {
             free(best);
             best = branch;
         }
@@ -374,7 +374,7 @@ char *anagrammi(char *sq)
         char *a = strchr(sq, 'A');
         swap(a, a + moves[best->move]);
         last_move = best->move;
-        
+
         strncat(result, &dirs[best->move], 1);
         len++;
 
@@ -465,7 +465,7 @@ int main(int argc, char **argv)
 
     for (int i = 0; i < procs; ++i)
         printf("Process read: %s\n", processes[i]);
-    
+
     printf("╞=======================================╡\n");
     printf("| Objective:                            |\n");
     printf("|  - Find \"OHJELMOINTIPUTKA\"            |\n");
@@ -485,7 +485,7 @@ int main(int argc, char **argv)
             int depth = atoi(processes[i]);
             // printf("depth %d\n", depth);
             i++;
-        
+
             // spawn a process
             int pid = fork();
             if (pid < 0)
@@ -505,7 +505,7 @@ int main(int argc, char **argv)
 
         if (running == 0)
             break;
-        
+
         int status;
         wait(&status);
 
