@@ -155,6 +155,8 @@ int better_result(t_data *data, int prev_result)
 {
     for (int i = 0; i < data->area; ++i)
     {
+        if (get_piece(data->laatta, data->laatta[i]) != i)
+            continue;
         split_vertically(data, i);
         split_horizontally(data, i);
     }

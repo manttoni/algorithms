@@ -382,7 +382,7 @@ char *anagrammi(char *sq)
         int i = len % strlen(asd);
         printf("|   %c\r", asd[i]);
         fflush(stdout);
-        ps(sq, (double)(clock() - start_time) / CLOCKS_PER_SEC, best_value, best);
+        //ps(sq, (double)(clock() - start_time) / CLOCKS_PER_SEC, best_value, best);
     }
 
     clock_t end_time = clock();
@@ -390,6 +390,7 @@ char *anagrammi(char *sq)
 
     ps(sq, elatime, best_value, best);
     free(best);
+    return NULL;
 }
 
 int start_process(int depth)

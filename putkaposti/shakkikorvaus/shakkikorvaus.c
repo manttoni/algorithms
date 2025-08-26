@@ -5,7 +5,7 @@
 
 #define SIZE 8
 #define AREA (SIZE * SIZE)
-#define TARGET 24
+#define TARGET 23
 #define PRINT 0
 
 int count_sormustin(char lauta[AREA])
@@ -51,21 +51,6 @@ int forms_rect(char lauta[AREA], int add)
         }
     }
     return 0;
-}
-
-int sormustin_in_line(char lauta[AREA])
-{
-    for (int i = 0; i < SIZE; ++i)
-    {
-        int row = 0;
-        for (int j = 0; j < SIZE; ++j)
-        {
-            if (lauta[i * SIZE + j] == 'o')
-                row++;
-            if (row > limit)
-                return 1;
-        }
-    }
 }
 
 int add_sormustin(char lauta[AREA], int last_add, int sormustin)
