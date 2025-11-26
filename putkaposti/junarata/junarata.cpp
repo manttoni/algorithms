@@ -34,11 +34,11 @@ class Train
 
 		int loop(int start_id, int end_id) const
 		{
-			int loops = 1;
+			int loops = 0;
 			int prev_value = 0;
 			for (int i = start_id; i <= end_id; ++i)
 			{
-				int value = number_ids[i + 1];
+				int value = numbers[i];
 				if (prev_value > value)
 					loops++;
 				prev_value = value;
