@@ -1,4 +1,4 @@
-koot = [8362]#[2, 4, 6, 10, 16, 26, 42, 68, 110, 178, 288, 466, 754, 1220, 1974, 3194, 5168, 8362]
+koot = [2, 4, 6, 10, 16, 26, 42, 68, 110, 178, 288, 466, 754, 1220, 1974, 3194, 5168, 8362]
 
 # How many spots does a knight threaten in each spot on the board?
 def create_threatnumbers(n):
